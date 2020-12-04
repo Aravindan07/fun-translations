@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Aravind | Fun-translations</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Fun Translations</h1>
+      </header>
+      <div class="select-api">
+        <label for="translation">Convert from English to:</label>
+        <select name="translation" id="translation">
+          <option value="Select translation">Select translation</option>
+          <option value="Groot">Groot translation</option>
+          <option value="Pirate">Pirate translation</option>
+          <option value="Morse-Code">Morse code translation</option>
+          <option value="Dog">Dog language translation</option>
+          <option value="Shakespeare">Shakespeare english translation</option>
+        </select>
+      </div>
+      <div class="textarea-wrap">
+        <textarea
+          id="txt-input"
+          name="english-input"
+          placeholder="Type your text in english and we will convert it into your desired language..."
+          required
+        ></textarea>
+      </div>
+      <button id="btn-translate">Translate</button>
+
+      <div class="output-heading">Output will appear here 👇</div>
+      <div id="output"></div>
+      <div class="contact">
+        Made with 💚 by <strong>Aravind</strong>
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/aravindan33/">
+            <img src="/icons/linkedin.svg" alt="linkedin" />
+          </a>
+          <a href="https://github.com/Aravindan07/">
+            <img src="/icons/github.svg" alt="github" />
+          </a>
+          <a href="https://twitter.com/aravindan_33/">
+            <img src="/icons/twitter.svg" alt="twitter" />
+          </a>
+          <a href="https://dev.to/aravindan07/">
+            <img src="/icons/dev.svg" alt="dev.to" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
