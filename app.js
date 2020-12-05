@@ -17,18 +17,19 @@ function getServerUrl(type, text) {
   if (type === "Shakespeare") {
     return `https://api.funtranslations.com/translate/shakespeare.json?text=${text}`;
   }
-  alert("Please select a translation");
 }
 
 function clickHandler() {
   let selectedApi = document.getElementById("translation").value;
+  if (selectedApi === "Select translation") {
+    return alert("Please select a translation");
+  }
   fetch(getServerUrl(selectedApi, inputValue.value))
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.contents);
       return (output.innerText = data.contents.translated);
     })
-    .catch((error) => alert("Please select a Translation"));
+    .catch(() => alert("An error occurred"));
 }
 
 let buttonTranslate = document.getElementById("btn-translate");

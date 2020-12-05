@@ -43,6 +43,8 @@ body {
 }
 
 textarea {
+  /* font-family: "Yeon Sung", cursive; */
+  font-size: 1.3rem;
   width: 60%;
   height: 20vh;
   padding: 1rem;
