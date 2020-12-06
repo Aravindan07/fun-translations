@@ -25,7 +25,12 @@ function clickHandler() {
     return alert("Please select a translation");
   }
   fetch(getServerUrl(selectedApi, inputValue.value))
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    })
     .then((data) => {
       return (output.innerText = data.contents.translated);
     })
